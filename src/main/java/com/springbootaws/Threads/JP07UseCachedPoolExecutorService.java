@@ -16,12 +16,12 @@ import java.util.concurrent.Executors;
  * concurrent tasks in Java.
  */
 
-public class JP06FixedPoolExecutorService {
+public class JP07UseCachedPoolExecutorService {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("MAIN Thread");
-		ExecutorService e = Executors.newFixedThreadPool(3);
+		ExecutorService e = Executors.newCachedThreadPool();
 		for (int i = 0; i < 6; i++) {
 			// e.submit(new JP05LoopTaskA()); // This return value Future
 			e.execute(new JP05LoopTaskA()); // this doesn't return value and it runs at descretion of Executor Service
